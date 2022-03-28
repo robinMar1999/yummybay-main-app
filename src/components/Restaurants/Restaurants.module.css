@@ -1,0 +1,15 @@
+.Restaurants {
+  border: 1px solid black;
+  width: 70%;
+  padding: 16px;
+  margin: 32px auto;
+}
+
+.Restaurant {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Restaurant img {
+  height: 72px;
+}

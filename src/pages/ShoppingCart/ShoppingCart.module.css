@@ -1,0 +1,18 @@
+.ShoppingCart {
+}
+
+.items {
+  width: 80vw;
+  border: 1px solid black;
+  padding: 16px;
+  margin: 32px auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item img {
+  height: 72px;
+}
