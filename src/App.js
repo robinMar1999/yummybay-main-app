@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import Payment from "./pages/Payment/Payment";
 import axios from "axios";
+import MyOrders from "./pages/MyOrders/MyOrders";
 
 function App() {
   const [token, setToken] = useState(() => {
@@ -92,7 +93,7 @@ function App() {
           path="/shopping-cart"
           element={<ShoppingCart cartItems={cartItems} makeOrder={makeOrder} />}
         />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/my-orders" element={<MyOrders token={token} />} />
       </Routes>
     </div>
   );

@@ -7,6 +7,7 @@ const Navbar = (props) => {
     <div className={classes.Navbar}>
       <Link to="/">Home</Link>
       <Link to="/shopping-cart">Cart</Link>
+      <Link to="/my-orders">My Orders</Link>
       <button onClick={props.logoutClick}>Logout</button>
     </div>
   );
