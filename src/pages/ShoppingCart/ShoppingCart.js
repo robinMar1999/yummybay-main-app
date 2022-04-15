@@ -23,7 +23,7 @@ const ShoppingCart = (props) => {
       <h1>Shopping Cart</h1>
       <div className={classes.items}>{items}</div>
       <div>Total Price: {totalPrice}</div>
-      <button onClick={props.makeOrder}>Order Now</button>
+      <button onClick={() => props.makeOrder(totalPrice)}>Order Now</button>
     </div>
   );
 };
