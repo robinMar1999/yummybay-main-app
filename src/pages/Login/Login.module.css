@@ -1,3 +1,62 @@
 .Login{
-  
+    display: flex;
+    height: 100vh;
+    background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(circle at center center, #b3ffff, #ffffff), repeating-radial-gradient(circle at center center, #b3ffff, #b3ffff, 4px, transparent 8px, transparent 4px);
+  background-blend-mode: multiply;
+}
+.Login h1{
+    width: 50vw;
+    margin-top: 20%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    opacity: 1;
+    text-align: center;
+  font-family: Arial, Helvetica, sans-serif ;
+
+  font-size: 40px;
+  color: rgb(202, 139, 56);
+}
+
+.Login p{
+    margin-top: 25%;
+    margin-left: -15%;
+    color: grey;
+    height: 100vh;
+    width: 10vw;
+}
+
+.Login form{
+    width: 20vw;
+    margin-top: 20%;
+    margin-right: 0%;
+}
+
+.Login form label{
+    color: grey;
+    margin-right: 2px;
+    font-size: 20px;
+}
+
+.Login form button{
+    margin: 2px;
+  background-color: red;
+  border-width: 1px;
+  background-color: #ffcccb;
+  border-radius: 100px;
+  box-shadow: rgba(248, 157, 118, 0.2) 0 -25px 18px -14px inset,rgba(248, 157, 118, 0.2) 0 1px 2px,rgba(248, 157, 118, 0.2) 0 2px 4px,rgba(248, 157, 118, 0.2) 0 4px 8px,rgba(248, 157, 118, 0.2) 0 8px 16px,rgba(248, 157, 118, 0.2) 0 16px 32px;
+  color: red;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }

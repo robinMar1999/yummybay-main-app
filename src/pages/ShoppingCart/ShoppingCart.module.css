@@ -1,18 +1,38 @@
 .ShoppingCart {
+  border-radius: 20px;
+}
+
+.ShoppingCart h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif ;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-size: 50px;
+  color: rgb(202, 139, 56);
 }
 
 .items {
+  display: flex;
+  flex-direction: column;
   width: 80vw;
-  border: 1px solid black;
   padding: 16px;
   margin: 32px auto;
 }
 
 .item {
   display: flex;
-  justify-content: space-between;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  color: grey;
+  margin: 20px;
+  background-color: azure;
+  justify-content:space-around;
 }
 
 .item img {
   height: 72px;
+  border: 1px solid black;
+  margin: 3px;
 }
+
+

@@ -11,6 +11,8 @@ import Payment from "./pages/Payment/Payment";
 import axios from "axios";
 import MyOrders from "./pages/MyOrders/MyOrders";
 import useRazorpay from "react-razorpay";
+import { toast,ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const Razorpay = useRazorpay();
@@ -92,6 +94,17 @@ function App() {
               },
             }).then((res) => {
               console.log(res);
+              console.log('rana order');
+              
+              toast.success('🦄 Order placed Successfully', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             });
             console.log(response.razorpay_payment_id);
             console.log(response.razorpay_order_id);
@@ -115,6 +128,15 @@ function App() {
 
         rzp1.on("payment.failed", function (response) {
           console.log("Payment Failed");
+          toast.error('🦄 Order failed',{
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
           console.log(response.error.code);
           console.log(response.error.description);
           console.log(response.error.source);
@@ -124,6 +146,15 @@ function App() {
           console.log(response.error.metadata.payment_id);
         });
         rzp1.open();
+        toast.success(`items added to cart`, {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
       });
     }
   };
@@ -168,6 +199,17 @@ function App() {
         />
         <Route path="/my-orders" element={<MyOrders token={token} />} />
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

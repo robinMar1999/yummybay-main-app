@@ -1,3 +1,108 @@
 .Dashboard{
+  background-color: #fff;
+  height: 100vh;
+}
+.Dashboard h2{
+    margin: 0px;
+    padding: 150px;
+    background-color: #ffa101;  
+    opacity: 0.8;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+}
+.Dashboard h3{
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif ;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-size: 30px;
+}
+
+.Dashboard .pdesc{
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif ;
+  margin-left: 150px;
+  margin-right: 150px;
+  color: #696969;
+}
+ .footerdark {
+   display: flex;
+   text-align: center;
+   padding-left: 35vw;
+   padding-right: 35vw;
   
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footerdark h3 {
+  margin-top:  12px;;
+  margin-bottom:12px;
+
+  text-align: center;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footerdark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footerdark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footerdark ul a:hover {
+  opacity:0.8;
+}
+
+
+.footerdark .item.text {
+  margin-bottom:36px;
+}
+
+
+.footerdark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footerdark .item.social {
+  text-align:center;
+}
+
+
+
+.footerdark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footerdark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footerdark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
 }

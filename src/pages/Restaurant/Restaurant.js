@@ -21,8 +21,8 @@ const Restaurant = (props) => {
   dishes.forEach((dish) => {
     dishList.push(
       <div key={dish._id} className={classes.dish}>
-        <div>{dish.name}</div>
-        <div>₹ {dish.price}</div>
+        <p>{dish.name}</p>
+        <p>₹ {dish.price}</p>
         <div>
           <img src={dish.imageDetails.url} alt={dish.name} />
         </div>
@@ -33,7 +33,7 @@ const Restaurant = (props) => {
   return (
     <div className={classes.Restaurant}>
       <h1>Dishes in {restaurant ? restaurant.name : "loading..."}</h1>
-      <div className={classes.dishes}>{dishList}</div>
+      <div  className={classes.dishes}>{dishList}</div>
     </div>
   );
 };

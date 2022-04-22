@@ -72,7 +72,7 @@ const Login = (props) => {
   };
   return (
     <div className={classes.Login}>
-      <h1>Welcome to YummyBay partners</h1>
+      <h1>Enter the email id</h1>
       {!isOtpSent && (
         <form onSubmit={sendFormHandler}>
           <label htmlFor="email">Email</label>

@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./ShoppingCart.module.css";
 import { Link } from "react-router-dom";
+import { borderRadius } from "@mui/system";
 
 const ShoppingCart = (props) => {
   const items = [];
@@ -8,9 +9,9 @@ const ShoppingCart = (props) => {
   props.cartItems.forEach((item) => {
     items.push(
       <div className={classes.item} key={item.dish._id}>
-        <div>{item.dish.name}</div>
-        <div>{item.count}</div>
-        <div>₹ {item.dish.price * item.count}</div>
+        <p>{item.dish.name}</p>
+        <p>{item.count}</p>
+        <p>₹ {item.dish.price * item.count}</p>
         <div>
           <img src={item.dish.imageDetails.url} alt={item.dish.name} />
         </div>
@@ -22,9 +23,10 @@ const ShoppingCart = (props) => {
     <div className={classes.ShoppingCart}>
       <h1>Shopping Cart</h1>
       <div className={classes.items}>{items}</div>
-      <div>Total Price: {totalPrice}</div>
-      <button onClick={() => props.makeOrder(totalPrice)}>Order Now</button>
+      <div style={{ color: 'grey' }}>Total Price: {totalPrice}</div>
+      <button style={{backgroundColor: " #FFE7E7",borderRadius:"20px", padding:"10px", marginTop:"10px", color:"grey", cursor:"pointer"}} onClick={() => props.makeOrder(totalPrice)}>Order Now</button>
     </div>
   );
 };
 export default ShoppingCart;
+
