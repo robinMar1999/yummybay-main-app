@@ -20,6 +20,28 @@ const MyOrders = (props) => {
         alert("some error occurred");
       });
   }, []);
+  useEffect(() => {
+    if (props.socket) {
+      props.socket.on("order-delivered", (order) => {
+        console.log(order);
+        updateOrder(order);
+      });
+    }
+  }, [props.socket]);
+
+  const updateOrder = (updatedOrder) => {
+    setOrders((prevOrders) => {
+      const newOrders = [];
+      for (let order of prevOrders) {
+        if (order._id === updatedOrder._id) {
+          newOrders.push(updatedOrder);
+        } else {
+          newOrders.push(order);
+        }
+      }
+      return newOrders;
+    });
+  };
   const orderList = [];
   orders.forEach((order) => {
     orderList.push(
@@ -38,7 +60,7 @@ const MyOrders = (props) => {
           })}
         </div>
         <div>Total Price: ₹ {order.totalPrice}</div>
-        <div>{order.status === 0 ? "Yet to Deliver" : "Delivered"}</div>
+        <div>{order.status < 2 ? "Yet to Deliver" : "Delivered"}</div>
       </div>
     );
   });

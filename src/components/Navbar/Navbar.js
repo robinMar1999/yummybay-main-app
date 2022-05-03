@@ -5,21 +5,17 @@ import { NavLink } from "react-router-dom";
 const Navbar = (props) => {
   return (
     <div className={classes.Navbar}>
-      <img
-        src="https://image.shutterstock.com/image-illustration/red-button-rectangular-shiny-plate-600w-1261322434.jpg"
-        alt="logo"
-        style={{
-          height: "40px",
-          width: "150px",
-          marginTop: "5px",
-          
-        }}
-      />
       <NavLink
         to="/"
         className={({ isActive }) => (isActive ? classes.Active : "")}
       >
-        Home
+        YummyBay
+      </NavLink>
+      <NavLink
+        to="/update-profile"
+        className={({ isActive }) => (isActive ? classes.Active : "")}
+      >
+        Update Profile
       </NavLink>
       <NavLink
         to="/shopping-cart"
@@ -33,7 +29,7 @@ const Navbar = (props) => {
       >
         My Orders
       </NavLink>
-      <button onClick={props.logoutClick}>Logout</button>
+      <button onClick={props.logout}>Logout</button>
     </div>
   );
 };
