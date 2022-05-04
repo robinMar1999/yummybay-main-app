@@ -43,8 +43,8 @@ const Restaurants = (props) => {
               {restaurant.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              We are a tight-knit, fun-loving, devoted team of local cooks
+              spreading the gospel of good times and good food in India.
             </Typography>
           </CardContent>
         </CardActionArea>
