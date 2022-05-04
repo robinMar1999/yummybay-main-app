@@ -123,6 +123,7 @@ function App() {
             }).then((res) => {
               console.log(res);
               console.log("rana order");
+              setCartItems([]);
 
               toast.success("🦄 Order placed Successfully", {
                 position: "top-right",
